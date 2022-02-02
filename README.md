@@ -15,7 +15,7 @@ Note: You can only access these node versions from git bash.
 3. Download the zip of node version manually from their official website and extract it under a common directory where all other node versions will be extracted. 
 
 Note: Also rename the directory with its version. for eg. 
-if extracted dir name is: node-v13.12.0 win . then rename it to 13.12.
+if extracted dir name is: node-v13.12.0 win then rename it to 13.12.
 ```bash
 cp nvm-bash.sh ~/
 echo ". ~/nvm-bash.sh" >> ~/.bash_profile
@@ -57,8 +57,9 @@ nvm_use <version>
 
 ## Why this script is not working for me?
 1. Check if NODE_BASE_PATH is set correctly in the script.
-2. Check if the nvm-bash.sh is present in the home directory.
-3. Check if nvm-bash.sh script is invoked from ~/.bash_profile.
+2. Check if extracted directories of node versions have node.exe.
+3. Check if the nvm-bash.sh is present in the home directory.
+4. Check if nvm-bash.sh script is invoked from ~/.bash_profile.
 If '. ~/nvm-bash.sh' line not found then execute this from git bash.
 ```bash
 echo ". ~/nvm-bash.sh" >> ~/.bash_profile
