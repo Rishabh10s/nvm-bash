@@ -11,15 +11,18 @@ Note: You can only access these node versions from git bash.
 ## Installation
 
 1. Copy the script in your home directory.
-2. Add script in .bash_profile under home directory
-3. Download the zip of node version manually from their official website and extract it under a common directory where all other node versions will be extracted. 
-
-Note: Also rename the directory with its version. for eg. 
-if extracted dir name is: node-v13.12.0 win then rename it to 13.12.
 ```bash
 cp nvm-bash.sh ~/
+```
+2. Add script in .bash_profile under home directory
+```bash
 echo ". ~/nvm-bash.sh" >> ~/.bash_profile
 ```
+3. Download the zip of node version manually from their official website and extract it under a common directory where all other node versions will be extracted. 
+
+Note: Also rename the directory with its version because you will need to use directory name while selecting a node version. for eg. 
+if extracted dir name is: node-v13.12.0 win then rename it to 13.12.
+
 4. Open nvm-bash.sh in any text editor. Change the value of NODE_BASE_PATH and NODE_VERSION.
 ```bash
 # NODE_BASE_PATH is the directory where node package is extracted. Keep in mind that all
