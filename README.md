@@ -2,11 +2,10 @@
 
 nvm-bash is a bash script for changing node version in windows without admin privileges.
 
-Note: You can only access these node versions from git bash. 
+Note: You can only access these node versions from git bash. This works only for node version 6.2.1 and above.
 
 ## Requirements
 1. Git bash
-2. Zip package of nodejs.
 
 ## Installation
 
@@ -18,26 +17,18 @@ cp nvm-bash.sh ~/
 ```bash
 echo ". ~/nvm-bash.sh" >> ~/.bash_profile
 ```
-3. Download the zip of node version manually from their official website and extract it under a common directory where all other node versions will be extracted. 
 
-Note: Also rename the directory with its version because you will need to use directory name while selecting a node version. for eg. 
-if extracted dir name is: node-v13.12.0 win then rename it to 13.12.
-
-4. Open nvm-bash.sh in any text editor. Change the value of NODE_BASE_PATH and NODE_VERSION.
+3. Open nvm-bash.sh in any text editor. Change the value of NODE_BASE_PATH.
 ```bash
 # NODE_BASE_PATH is the directory where node package is extracted. Keep in mind that all
-# node versions should be extracted in same base path.
+# node versions will be extracted in the same base path.
 # For eg. 
 # $ ls $NODE_BASE_PATH
-# 13.12/  16.3/
+# 13.12.0/  16.3.0/
 NODE_BASE_PATH="/c/Users/{username}/nodejs"
-
-# Use the directory name where the node package is extracted. The node.exe must be 
-# present inside this directory name.
-NODE_VERSION=13.12
 ```
 
-5. Start a new session of git bash.
+4. Start a new session of git bash.
 
 ## Usage
 
@@ -52,10 +43,27 @@ nvm_list
 
 # Use a different version of nodejs.
 nvm_use <version>
-#for eg. 
+# for eg. 
 # >> nvm_use 16.3
 # Node js 16.3 version found. Updating the PATH.
 # Node version set to 16.3.
+
+# To remove a nodejs version
+nvm_remove <version>
+# for eg.
+# >> nvm_remove 6.2.1
+# Successfully removed node version 6.2.1.
+
+# Print help
+nvm_help
+# for eg.
+# >> nvm_help
+# ****Welcome to nvm_bash****
+# Usage:
+# nvm_list:                 List the node versions available locally. Also displays the current version if set.
+# nvm_use <version>:        Use the specified node version. If not found locally, it downloads from node archive.
+# nvm_remove <version>:     Remove the specified node version from local.
+# nvm_help:                 Display help for using node_bash
 ```
 
 ## Why this script is not working for me?
