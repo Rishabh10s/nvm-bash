@@ -6,6 +6,7 @@ Note: You can only access these node versions from git bash. This works only for
 
 ## Requirements
 1. Git bash
+2. OS: Windows
 
 ## Installation
 
